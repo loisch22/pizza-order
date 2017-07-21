@@ -61,6 +61,18 @@ body {
   padding: 30px;
   margin-top: 30%;
 }
+#pizzaSize {
+  font-size: 25px;
+}
 .selectToppings {
   margin-bottom: 30%;
+  font-size: 20px;
+}
+#orderResult, #orderConfirm {
+  margin-top: 15%;
+  margin-bottom: 15%;
+  font-size: 20px;
+}
+#orderConfirm img, #orderConfirm h3, #orderConfirm h4 {
+  text-align: center;
 }

@@ -1,9 +1,14 @@
+
+//business/back-end logic
+var basePrice = 5;
+var subtotal;
+var addSize;
+var totalOuput;
 function Pizza(selectSize, toppings, total) {
   this.selectSize = selectSize;
   this.toppings = toppings;
   this.total = total;
 }
-
 Pizza.prototype.getSizeTotal = function(sizeInput) {
   if (sizeInput === "Small" || sizeInput === "Medium") {
     subtotal = this.total += 2;
@@ -15,7 +20,6 @@ Pizza.prototype.getSizeTotal = function(sizeInput) {
     return addSize;
   }
 }
-
 Pizza.prototype.getTotal = function(chosenToppings) {
   if (chosenToppings.length >= 9) {
     totalOuput = addSize + 11;
@@ -35,11 +39,7 @@ Pizza.prototype.getTotal = function(chosenToppings) {
   }
 }
 
-var basePrice = 5;
-var subtotal;
-var addSize;
-var totalOuput;
-
+//UI/front-end logic
 $(document).ready(function() {
   $("form#toppings").submit(function(event) {
     event.preventDefault();
@@ -54,32 +54,37 @@ $(document).ready(function() {
     var newOrderTotal = newOrder.getTotal(chosenToppings);
 
 
-    $('.orderList').append("<strong>" + "Size select: " + "</strong>" + sizeInput);
+    $('.orderSize').append("<strong>" + "Size: " + "</strong>" + sizeInput);
     $("input:checkbox[name=select-toppings]:checked").each(function() {
       chosenToppings = $(this).val();
       $('.orderList').append("<li>" + chosenToppings + "</li>");
     });
-    $('.showTotal').append("Total: " + newOrderTotal);
+    $('.showTotal').append("<strong>" + "Total: " + "</strong>" + "$" + newOrderTotal);
 
    $("#orderResult").fadeIn();
    $("#orderConfirm").hide();
    $(".pizzaSize").hide();
    $(".selectToppings").hide();
    $("form#toppings").hide();
+   $(".top").hide();
   });
   $("#placeOrder").click(function() {
+    $("form#toppings").trigger("reset");
+    $("#pizzaSize").val("");
+
     $("#orderConfirm").show();
     $("#orderResult").hide();
     $("form#toppings").hide();
     $(".pizzaSize").hide();
+    $(".top").hide();
   });
   $(".newPizzaOrder").click(function() {
-    $("#pizzaSize").val("");
-    $("form#toppings").trigger("reset");
 
-    $(".pizzaSize").show();
     $("form#toppings").show();
+    $(".pizzaSize").show();
+    $(".top").show();
     $("#orderConfirm").hide();
+    $("#orderResult").hide();
 
   });
 });

@@ -79,12 +79,14 @@
                 <div class="well">
                   <div class="order">
                     <h3>Review Your Order</h3>
+                    <p class="orderSize"></p>
                     <ul class="orderList">
 
                     </ul>
                     <p class="showTotal"></p>
 
                     <button id="placeOrder" class="confirm btn btn-primary">Place Order</button>
+                    <button class="newPizzaOrder btn btn-primary">Cancel</button>
                   </div>
                 </div>
               </div>
@@ -95,17 +97,25 @@
     <div class="container">
       <div id="orderConfirm">
         <div class="well">
-          <img src="img/pizza1.png" alt="image of pizza">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="img/pizza1.png" alt="image of pizza">
 
-          <h3>Thank you for ordering with us!</h3>
-          <h4>Your pizza will arrive in 30-40 minutes.</h4>
+              <h3>Thank you for ordering with us!</h3>
+              <h4>Your pizza will arrive in 30-40 minutes.</h4>
+            </div>
 
-          <h4>Order Confirmation #98073920</h4>
-          <ul class="orderList">
+            <div class="col-md-6">
+              <h4>Order Confirmation #98073920</h4>
+              <p class="orderSize"></p>
+              <h5>Toppings</h5>
+              <ul class="orderList">
 
-          </ul>
-          <p class="showTotal"></p>
-          <button class="newPizzaOrder btn btn-primary">Place New Order</button>
+              </ul>
+              <p class="showTotal"></p>
+              <button class="newPizzaOrder btn btn-primary">Place New Order</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
