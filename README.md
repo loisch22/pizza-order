@@ -29,7 +29,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-_When you click "cancel" or "place new order" the toppings form will not show_
+_When you click "cancel" or "place new order" the toppings form will not show. This is not a problem on the Plain Branch._
 
 ## Technologies Used
 
