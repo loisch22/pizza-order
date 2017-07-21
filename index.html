@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Pizza Order</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
     <script
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -33,10 +33,10 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="selectToppings">
-        <div class="well">
-          <form id="toppings">
+    <form id="toppings">
+      <div class="container">
+        <div class="selectToppings">
+          <div class="well">
             <div class="form-group">
               <h3><strong>Select Toppings:</strong></h3>
               <br>
@@ -59,11 +59,11 @@
               <input type="checkbox" name="select-toppings" value="Spinach">Spinach<br>
               <input type="checkbox" name="select-toppings" value="Cheese">Cheese<br>
             </div>
-            <button type="submit" class="btn btn-default">Review Order</button>
-          </form>
+            <button type="submit" class="btn review">Review Order</button>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
 
     <div id="orderResult">
       <div class="container">
@@ -83,8 +83,8 @@
                     </ul>
                     <p class="showTotal"></p>
 
-                    <button id="placeOrder" class="confirm btn btn-primary">Place Order</button>
-                    <button class="newPizzaOrder btn btn-primary">Cancel</button>
+                    <button id="placeOrder" class="btn placeOrder">Place Order</button>
+                    <button class="newPizzaCancel btn">Cancel</button>
                   </div>
                 </div>
               </div>
@@ -101,17 +101,16 @@
 
               <h3>Thank you for ordering with us!</h3>
               <h4>Your pizza will arrive in 30-40 minutes.</h4>
+              <h3>Order Confirmation #98073920</h3>
             </div>
 
             <div class="col-md-6">
-              <h4>Order Confirmation #98073920</h4>
               <p class="orderSize"></p>
-              <h5>Toppings</h5>
               <ul class="orderList">
 
               </ul>
               <p class="showTotal"></p>
-              <button class="newPizzaOrder btn btn-primary">Place New Order</button>
+              <button class="newPizzaOrder btn">Place New Order</button>
             </div>
           </div>
         </div>

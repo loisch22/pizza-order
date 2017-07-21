@@ -75,15 +75,24 @@ $(document).ready(function() {
     $(".pizzaSize").hide();
     $(".top").hide();
   });
-  $(".newPizzaOrder").click(function() {
-    $("#pizzaSize").val("");
-    $("form#toppings").trigger("reset");
-
+  $(".newPizzaCancel").click(function() {
     $("form#toppings").show();
     $(".pizzaSize").show();
     $(".top").show();
     $("#orderConfirm").hide();
     $("#orderResult").hide();
 
+    $("#pizzaSize").val("");
+    $("form#toppings").trigger("reset");
+  });
+  $(".newPizzaOrder").click(function() {
+    $("form#toppings").show();
+    $(".pizzaSize").show();
+    $(".top").show();
+    $("#orderConfirm").hide();
+    $("#orderResult").hide();
+
+    $("#pizzaSize").val("");
+    $("form#toppings").trigger("reset");
   });
 });

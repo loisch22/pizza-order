@@ -64,6 +64,37 @@ body {
   margin-bottom: 20%;
   font-size: 20px;
 }
+button.review, button.placeOrder, button.newPizzaOrder {
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: #273b09;
+  color: #FFFFFF;
+}
+button.review:hover, button.placeOrder:hover, button.newPizzaOrder:hover {
+  background-color: #002400;
+  color: #FFFFFF;
+  border: solid 4px #002400;
+  letter-spacing: 4px;
+  opacity: 2;
+}
+button.review:active, button.placeOrder:active, button.newPizzaOrder:active {
+  background-color: #002400;
+  color: #FFFFFF;
+  border: solid 4px #002400;
+  letter-spacing: 4px;
+}
+button.newPizzaCancel {
+  background-color: #6f3b3b;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+button.newPizzaCancel:hover, button.newPizzaCancel:hover:active {
+  border: solid 4px #583131;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+}
 #orderResult, #orderConfirm {
   margin-top: 15%;
   margin-bottom: 15%;
@@ -71,4 +102,82 @@ body {
 }
 #orderConfirm img, #orderConfirm h3, #orderConfirm h4 {
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: #6f3b3b;
+      background-image: none;
+    }
+    .top {
+      background-image: url("../img/assorted-pizza.jpg");
+    }
+    .top h1 {
+      font-size: 40px;
+    }
+    .pizzaSize h2 {
+      font-family: 'Quicksand', sans-serif;
+      background: #ffffff;
+      opacity: .9;
+      font-size: 20px;
+      letter-spacing: 10px;
+      text-align: center;
+      padding: 30px;
+      margin-top: 2%;
+    }
+    .pizzaSize{
+      margin-right: 3%;
+    }
+    #pizzaSize {
+      font-size: 20px;
+    }
+    .selectToppings {
+      margin-bottom: 20%;
+      margin-right: 3%;
+      font-size: 20px;
+    }
+    button.review, button.placeOrder, button.newPizzaOrder {
+      font-size: 20px;
+      letter-spacing: 1px;
+      background-color: #273b09;
+      color: #FFFFFF;
+    }
+    button.review:hover, button.placeOrder:hover, button.newPizzaOrder:hover {
+      background-color: #002400;
+      color: #FFFFFF;
+      border: solid 2px #002400;
+      letter-spacing: 2px;
+      opacity: 2;
+    }
+    button.review:active, button.placeOrder:active, button.newPizzaOrder:active {
+      background-color: #002400;
+      color: #FFFFFF;
+      border: solid 4px #002400;
+      letter-spacing: 4px;
+    }
+    button.newPizzaCancel {
+      background-color: #6f3b3b;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    button.newPizzaCancel:hover, button.newPizzaCancel:hover:active {
+      border: solid 4px #583131;
+      letter-spacing: 4px;
+      color: #FFFFFF;
+    }
+    #orderResult, #orderConfirm {
+      margin-top: 15%;
+      margin-bottom: 15%;
+      font-size: 20px;
+    }
+    #orderConfirm img, #orderConfirm h3, #orderConfirm h4 {
+      text-align: center;
+    }
+    #orderConfirm img, #orderResult img {
+      width: 75%;
+      margin-left: 10%;
+      margin-bottom: 8%;
+    }
 }
