@@ -69,9 +69,6 @@ $(document).ready(function() {
    $(".top").hide();
   });
   $("#placeOrder").click(function() {
-    $("#pizzaSize").val("");
-    $("form#toppings").trigger("reset");
-
     $("#orderConfirm").show();
     $("#orderResult").hide();
     $("form#toppings").hide();
@@ -79,6 +76,8 @@ $(document).ready(function() {
     $(".top").hide();
   });
   $(".newPizzaOrder").click(function() {
+    $("#pizzaSize").val("");
+    $("form#toppings").trigger("reset");
 
     $("form#toppings").show();
     $(".pizzaSize").show();

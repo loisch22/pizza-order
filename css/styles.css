@@ -42,11 +42,7 @@ body {
   opacity: .9;
   font-size: 80px;
   letter-spacing: 20px;
-}
-.top a:link, a:hover, a:visited {
-  text-decoration: none;
   color: #333333;
-  cursor: pointer;
 }
 .well {
   opacity: .7;
@@ -65,7 +61,7 @@ body {
   font-size: 25px;
 }
 .selectToppings {
-  margin-bottom: 30%;
+  margin-bottom: 20%;
   font-size: 20px;
 }
 #orderResult, #orderConfirm {
