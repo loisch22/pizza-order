@@ -6,26 +6,43 @@ function Pizza(selectSize, toppings, total) {
 
 Pizza.prototype.getSizeTotal = function(sizeInput) {
   if (sizeInput === "Small" || sizeInput === "Medium") {
-    var subtotal = this.total += 2;
-    var priceOutput = basePrice + subtotal;
-    return priceOutput;
+    subtotal = this.total += 2;
+    addSize = basePrice + subtotal;
+    return addSize;
   } else if (sizeInput === "Large" || sizeInput === "X-Large") {
-    var subtotal = this.total += 4;
-    var priceOutput = basePrice + subtotal;
-    return priceOutput;
+    subtotal = this.total += 4;
+    addSize = basePrice + subtotal;
+    return addSize;
+  }
+}
+
+Pizza.prototype.getTotal = function(chosenToppings) {
+  if (chosenToppings.length > 2) {
+    totalOuput = addSize + 4;
+    return totalOuput;
+  } else {
+    totalOuput = addSize + 2;
+    return totalOuput;
   }
 }
 
 var basePrice = 5;
+var subtotal;
+var addSize;
+var totalOuput;
 
 $(document).ready(function() {
   $("form#toppings").submit(function(event) {
     event.preventDefault();
     debugger;
     var sizeInput = $("#pizzaSize").val();
-    var chosenToppings = $("input:checkbox[name=select-toppings]:checked").val();
+    var chosenToppings = $("input:checkbox[name=select-toppings]:checked").each(function() {
+      chosenToppings = $(this).val();
+    });
+
     var newOrder = new Pizza(sizeInput, chosenToppings, 0);
     var newOrderSize = newOrder.getSizeTotal(sizeInput);
+    var newOrderTotal = newOrder.getTotal(chosenToppings);
 
 
 
@@ -34,7 +51,7 @@ $(document).ready(function() {
       chosenToppings = $(this).val();
       $('.orderList').append("<li>" + chosenToppings + "</li>");
     });
-    $('.orderList').append("Total: " + newOrderSize);
+    $('.orderList').append("Total: " + newOrderTotal);
 
 
   });
