@@ -29,30 +29,60 @@
     </div>
 
     <div class="container">
-      <div class="well">
-        <div class="selectToppings">
-          <form id="toppings">
-            <div class="form-group">
-              <p>Select Toppings:</p>
-              <input type="checkbox" name="select-toppings" value="Cheese">Cheese<br>
-              <input type="checkbox" name="select-toppings" value="Pepperoni">Pepperoni<br>
-              <input type="checkbox" name="select-toppings" value="Sausage">Sausage<br>
-              <input type="checkbox" name="select-toppings" value="Mushroom">Mushroom<br>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="selectToppings">
+            <form id="toppings">
+              <div class="form-group">
+                <h3><strong>Select Toppings:</strong></h3>
+                <br>
+                <p><strong>Meats</strong></p>
+                <input type="checkbox" name="select-toppings" value="Pepperoni">Pepperoni<br>
+                <input type="checkbox" name="select-toppings" value="Chicken">Chicken<br>
+                <input type="checkbox" name="select-toppings" value="Sausage">Sausage<br>
+                <input type="checkbox" name="select-toppings" value="Ham">Ham<br>
+                <input type="checkbox" name="select-toppings" value="Bacon">Bacon<br>
+                <br>
+                <p><strong>Vegetables/Other Toppings</strong></p>
+                <input type="checkbox" name="select-toppings" value="Mushroom">Mushroom<br>
+                <input type="checkbox" name="select-toppings" value="Pineapples">Pineapples<br>
+                <input type="checkbox" name="select-toppings" value="Garlic">Garlic<br>
+                <input type="checkbox" name="select-toppings" value="Jalapenos">Jalapenos<br>
+                <input type="checkbox" name="select-toppings" value="Spinach">Spinach<br>
+                <input type="checkbox" name="select-toppings" value="Cheese">Cheese<br>
+              </div>
+              <button type="submit" class="btn btn-default">Review Order</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="orderResult" class="container">
+            <div class="order">
+              <h3>Review Your Order</h3>
+              <ul class="orderList">
+
+              </ul>
+              <p class="showTotal"></p>
+
+              <button id="placeOrder" class="confirm btn btn-primary">Place Order</button>
             </div>
-            <button type="submit" class="btn btn-default">Subtotal</button>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
+    </div>`
 
-      <div class="order">
-        <h3>Review Your Order</h3>
+    <div class="container">
+      <div id="orderConfirm">
+        <h3>Thank you for ordering with us!</h3>
+        <h4>Your pizza will arrive in 30-40 minutes.</h4>
+
+        <h4>Order Confirmation #98073920</h4>
         <ul class="orderList">
 
         </ul>
         <p class="showTotal"></p>
-
-        <button class="confirm btn btn-primary">Place Order</button>
+        <button class="newPizzaOrder btn btn-primary">Place New Order</button>
       </div>
     </div>
 

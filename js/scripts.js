@@ -17,8 +17,14 @@ Pizza.prototype.getSizeTotal = function(sizeInput) {
 }
 
 Pizza.prototype.getTotal = function(chosenToppings) {
-  if (chosenToppings.length > 2) {
-    totalOuput = addSize + 4;
+  if (chosenToppings.length >= 7) {
+    totalOuput = addSize + 9;
+    return totalOuput;
+  } else if (chosenToppings.length >= 5) {
+    totalOuput = addSize + 7;
+    return totalOuput;
+  }else if (chosenToppings.length >= 2) {
+    totalOuput = addSize + 5;
     return totalOuput;
   } else {
     totalOuput = addSize + 2;
@@ -45,14 +51,29 @@ $(document).ready(function() {
     var newOrderTotal = newOrder.getTotal(chosenToppings);
 
 
-
     $('.orderList').append("<strong>" + "Size select: " + "</strong>" + sizeInput);
     $("input:checkbox[name=select-toppings]:checked").each(function() {
       chosenToppings = $(this).val();
       $('.orderList').append("<li>" + chosenToppings + "</li>");
     });
-    $('.orderList').append("Total: " + newOrderTotal);
+    $('.showTotal').append("Total: " + newOrderTotal);
 
+   $("#orderResult").fadeIn();
+   $("#orderConfirm").hide();
+  });
+  $("#placeOrder").click(function() {
+    $("#orderConfirm").show();
+    $("#orderResult").hide();
+    $("form#toppings").hide();
+    $(".pizzaSize").hide();
+  });
+  $(".newPizzaOrder").click(function() {
+    $("#pizzaSize").val("");
+    $("form#toppings").trigger("reset");
+
+    $("form#toppings").fadeIn();
+    $(".pizzaSize").fadeIn();
+    $("#orderConfirm").hide();
 
   });
 });
