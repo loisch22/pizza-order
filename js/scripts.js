@@ -40,7 +40,7 @@ var subtotal;
 var addSize;
 var totalOuput;
 
-$(document).ready(function() {  
+$(document).ready(function() {
   $("form#toppings").submit(function(event) {
     event.preventDefault();
     debugger;
@@ -77,8 +77,8 @@ $(document).ready(function() {
     $("#pizzaSize").val("");
     $("form#toppings").trigger("reset");
 
-    $("form#toppings").fadeIn();
-    $(".pizzaSize").fadeIn();
+    $(".pizzaSize").show();
+    $("form#toppings").show();
     $("#orderConfirm").hide();
 
   });
