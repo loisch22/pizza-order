@@ -1,6 +1,55 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-image: url("http://riggattis.com/images/gallery02_big.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-size: 100%;
+  background-position: center;
+  background-color: #6f3b3b;
+}
 #orderResult {
   display: none;
 }
 #orderConfirm {
   display: none;
+}
+.top {
+  text-align: center;
+  margin: 0 0 10% 0;
+  padding: 8%;
+  border: none;
+  background-image: url("../img/green-woodpizz.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.top h1 {
+  font-family: 'Quicksand', sans-serif;
+  background: #ffffff;
+  opacity: .9;
+  font-size: 80px;
+  letter-spacing: 20px;
+}
+.top a:link, a:hover, a:visited {
+  text-decoration: none;
+  color: #333333;
+  cursor: pointer;
+}
+.well {
+  opacity: .7;
+}
+.selectToppings {
+
 }

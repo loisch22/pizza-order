@@ -10,11 +10,18 @@
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
+    <div class="top">
+      <a href="loisch22.github.io/pizza">
+        <h1>LOLO PIZZA</h1>
+      </a>
+    </div>
 
     <div class="pizzaSize">
       <div class="container">
+        <h2>Place Order:</h2>
         <div class="well">
           <h3>Pizza size:</h3>
           <select class="form-control" id="pizzaSize">
@@ -29,60 +36,77 @@
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-            <div class="selectToppings">
-            <form id="toppings">
-              <div class="form-group">
-                <h3><strong>Select Toppings:</strong></h3>
-                <br>
-                <p><strong>Meats</strong></p>
-                <input type="checkbox" name="select-toppings" value="Pepperoni">Pepperoni<br>
-                <input type="checkbox" name="select-toppings" value="Chicken">Chicken<br>
-                <input type="checkbox" name="select-toppings" value="Sausage">Sausage<br>
-                <input type="checkbox" name="select-toppings" value="Ham">Ham<br>
-                <input type="checkbox" name="select-toppings" value="Bacon">Bacon<br>
-                <br>
-                <p><strong>Vegetables/Other Toppings</strong></p>
-                <input type="checkbox" name="select-toppings" value="Mushroom">Mushroom<br>
-                <input type="checkbox" name="select-toppings" value="Pineapples">Pineapples<br>
-                <input type="checkbox" name="select-toppings" value="Garlic">Garlic<br>
-                <input type="checkbox" name="select-toppings" value="Jalapenos">Jalapenos<br>
-                <input type="checkbox" name="select-toppings" value="Spinach">Spinach<br>
-                <input type="checkbox" name="select-toppings" value="Cheese">Cheese<br>
-              </div>
-              <button type="submit" class="btn btn-default">Review Order</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div id="orderResult" class="container">
-            <div class="order">
-              <h3>Review Your Order</h3>
-              <ul class="orderList">
-
-              </ul>
-              <p class="showTotal"></p>
-
-              <button id="placeOrder" class="confirm btn btn-primary">Place Order</button>
+      <div class="selectToppings">
+        <div class="well">
+          <form id="toppings">
+            <div class="form-group">
+              <h3><strong>Select Toppings:</strong></h3>
+              <br>
+              <p><strong>Meats</strong></p>
+              <input type="checkbox" name="select-toppings" value="Pepperoni">Pepperoni<br>
+              <input type="checkbox" name="select-toppings" value="Chicken">Chicken<br>
+              <input type="checkbox" name="select-toppings" value="Sausage">Sausage<br>
+              <input type="checkbox" name="select-toppings" value="Ham">Ham<br>
+              <input type="checkbox" name="select-toppings" value="Bacon">Bacon<br>
+              <br>
+              <p><strong>Vegetables/Other Toppings</strong></p>
+              <input type="checkbox" name="select-toppings" value="Mushroom">Mushroom<br>
+              <input type="checkbox" name="select-toppings" value="Pineapples">Pineapples<br>
+              <input type="checkbox" name="select-toppings" value="Garlic">Garlic<br>
+              <input type="checkbox" name="select-toppings" value="Olives">Olives<br>
+              <input type="checkbox" name="select-toppings" value="Green Peppers">Green Peppers<br>
+              <input type="checkbox" name="select-toppings" value="Red Peppers">Red Peppers<br>
+              <input type="checkbox" name="select-toppings" value="Tomatoes">Tomatoes<br>
+              <input type="checkbox" name="select-toppings" value="Jalapenos">Jalapenos<br>
+              <input type="checkbox" name="select-toppings" value="Spinach">Spinach<br>
+              <input type="checkbox" name="select-toppings" value="Cheese">Cheese<br>
             </div>
-          </div>
+            <button type="submit" class="btn btn-default">Review Order</button>
+          </form>
         </div>
       </div>
-    </div>`
+    </div>
+
+    <div id="orderResult">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/pizza1.png" alt="image of pizza">
+          </div>
+
+
+              <div class="col-md-6">
+                <div class="well">
+                  <div class="order">
+                    <h3>Review Your Order</h3>
+                    <ul class="orderList">
+
+                    </ul>
+                    <p class="showTotal"></p>
+
+                    <button id="placeOrder" class="confirm btn btn-primary">Place Order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
 
     <div class="container">
       <div id="orderConfirm">
-        <h3>Thank you for ordering with us!</h3>
-        <h4>Your pizza will arrive in 30-40 minutes.</h4>
+        <div class="well">
+          <img src="img/pizza1.png" alt="image of pizza">
 
-        <h4>Order Confirmation #98073920</h4>
-        <ul class="orderList">
+          <h3>Thank you for ordering with us!</h3>
+          <h4>Your pizza will arrive in 30-40 minutes.</h4>
 
-        </ul>
-        <p class="showTotal"></p>
-        <button class="newPizzaOrder btn btn-primary">Place New Order</button>
+          <h4>Order Confirmation #98073920</h4>
+          <ul class="orderList">
+
+          </ul>
+          <p class="showTotal"></p>
+          <button class="newPizzaOrder btn btn-primary">Place New Order</button>
+        </div>
       </div>
     </div>
 

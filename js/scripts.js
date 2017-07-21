@@ -17,7 +17,10 @@ Pizza.prototype.getSizeTotal = function(sizeInput) {
 }
 
 Pizza.prototype.getTotal = function(chosenToppings) {
-  if (chosenToppings.length >= 7) {
+  if (chosenToppings.length >= 9) {
+    totalOuput = addSize + 11;
+    return totalOuput;
+  } else if (chosenToppings.length >= 7) {
     totalOuput = addSize + 9;
     return totalOuput;
   } else if (chosenToppings.length >= 5) {
@@ -37,7 +40,7 @@ var subtotal;
 var addSize;
 var totalOuput;
 
-$(document).ready(function() {
+$(document).ready(function() {  
   $("form#toppings").submit(function(event) {
     event.preventDefault();
     debugger;
@@ -60,6 +63,9 @@ $(document).ready(function() {
 
    $("#orderResult").fadeIn();
    $("#orderConfirm").hide();
+   $(".pizzaSize").hide();
+   $(".selectToppings").hide();
+   $("form#toppings").hide();
   });
   $("#placeOrder").click(function() {
     $("#orderConfirm").show();
