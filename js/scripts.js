@@ -69,8 +69,8 @@ $(document).ready(function() {
    $(".top").hide();
   });
   $("#placeOrder").click(function() {
-    $("form#toppings").trigger("reset");
     $("#pizzaSize").val("");
+    $("form#toppings").trigger("reset");
 
     $("#orderConfirm").show();
     $("#orderResult").hide();
